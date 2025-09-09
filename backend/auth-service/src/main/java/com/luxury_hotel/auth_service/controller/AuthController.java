@@ -17,7 +17,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
-
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -42,20 +41,19 @@ public class AuthController {
         return ResponseEntity.ok(response);
     }
 
+
     @PostMapping("/verify-otp")
-    public ResponseEntity<TokenResponseDTO> verifyOtp(
-            @RequestParam String email,
-            @RequestParam String otp) {
-        TokenResponseDTO response = userService.verifyOtp(email, otp);
+    public ResponseEntity<TokenResponseDTO> verifyOtp(@Valid @RequestBody VerifyOtpRequestDTO dto) {
+        TokenResponseDTO response = userService.verifyOtp(dto.getEmail(), dto.getOtp());
         return ResponseEntity.ok(response);
     }
-
 
     @PostMapping("/resend-otp")
-    public ResponseEntity<String> resendOtp(@RequestParam String email) {
-        String response = userService.resendOtp(email);
+    public ResponseEntity<String> resendOtp(@Valid @RequestBody ResendOtpRequestDTO dto) {
+        String response = userService.resendOtp(dto.getEmail());
         return ResponseEntity.ok(response);
     }
+
 
 
     @PostMapping("/forgot-password")
@@ -113,4 +111,18 @@ public class AuthController {
                 })
                 .orElseThrow(() -> new TokenRefreshException("Invalid refresh token"));
     }
+    @PostMapping("/logout")
+    public ResponseEntity<String> logout(Authentication authentication) {
+        if (authentication == null) {
+            return ResponseEntity.badRequest().body("Not authenticated");
+        }
+        String email = authentication.getName();
+        User user = userRepository.findByEmail(email).orElse(null);
+        if (user == null) {
+            return ResponseEntity.badRequest().body("User not found");
+        }
+        refreshTokenService.deleteByUserId(user.getId());
+        return ResponseEntity.ok("Logged out successfully");
+    }
+
 }

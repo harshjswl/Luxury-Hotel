@@ -41,3 +41,8 @@ jwt:
   expiration: 86400000
   accessExpirationMs: 900000
   refreshExpirationMs: 604800000
+
+
+# application.yml (excerpt)
+frontend:
+  url: http://localhost:5173

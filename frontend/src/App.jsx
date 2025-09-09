@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Footer from './component/Footer';
 import SlidingBanner from './component/SlidingBanner';
+import OtpVerify from './pages/OtpVerify';
 function App() {
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Banner/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route  path='/register' element={<Register/>}/>
+          <Route path='/otp-verify' element={<OtpVerify/>}/>
         </Routes>
       </div>
       </Router>
