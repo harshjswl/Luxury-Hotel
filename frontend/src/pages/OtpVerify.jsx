@@ -35,7 +35,7 @@ function OtpVerify() {
               type="text"
               placeholder="Enter OTP"
               value={otp}
-              onChange={(e) => setOtp(e.target.value)} // ✅ controlled input
+              onChange={(e) => setOtp(e.target.value)}
               required
             />
           </div>

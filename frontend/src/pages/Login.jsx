@@ -76,7 +76,7 @@ function Login() {
 
         <div className="extra-links">
           <p>
-            <a href="#">Forgot Password?</a>
+            <a href="/forgot-password">Forgot Password?</a>
           </p>
           <p>
             New to website? <a href="/register">Create an account</a>

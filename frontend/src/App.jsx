@@ -6,6 +6,8 @@ import Register from './pages/Register';
 import Footer from './component/Footer';
 import SlidingBanner from './component/SlidingBanner';
 import OtpVerify from './pages/OtpVerify';
+import ForgotPassword from './pages/ForgotPassword';
+import SetPassword from './pages/SetPassword';
 function App() {
 
 
@@ -20,6 +22,8 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route  path='/register' element={<Register/>}/>
           <Route path='/otp-verify' element={<OtpVerify/>}/>
+          <Route path='/forgot-password' element={<ForgotPassword/>}/>
+          <Route path='/set-password' element={<SetPassword/>}/>
         </Routes>
       </div>
       </Router>
