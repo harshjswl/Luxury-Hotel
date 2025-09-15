@@ -1,0 +1,113 @@
+.about-us {
+  width: 100%;
+  padding: 80px 10%;
+  background: #f9f9f9;
+  text-align: center;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==============================
+   Text Section
+============================== */
+.about-text h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+  position: relative;
+}
+
+.about-text h1::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #c68d4a;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.about-text p {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ==============================
+   More Button
+============================== */
+.more-btn {
+  background: #c68d4a;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.more-btn:hover {
+  background: #e1ab6d;
+  transform: scale(1.05);
+}
+
+/* ==============================
+   Stats Boxes
+============================== */
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.boxes div {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.boxes div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.boxes h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #c68d4a;
+  margin-bottom: 8px;
+}
+
+.boxes p {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+/* ==============================
+   Responsive Design
+============================== */
+@media (max-width: 992px) {
+  .boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .about-text h1 {
+    font-size: 32px;
+  }
+
+  .boxes {
+    grid-template-columns: 1fr;
+  }
+}

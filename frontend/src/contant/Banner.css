@@ -1,0 +1,128 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(55%) contrast(1.1); /* slightly richer background */
+}
+
+.banner-contant {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.banner-contant h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.banner-contant p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #e2e1e1;
+}
+
+.banner-contant h4 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+
+  font-weight: 500;
+  margin: 6px 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.4); /* subtle background badge */
+  color: #f5c56a;
+}
+
+.banner-contant h4 svg {
+  font-size: 18px;
+  color: #f5c56a;
+}
+
+/* ===========================
+   Booking Form Styling
+=========================== */
+.booking-div {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.booking-div form {
+  background: rgba(255, 255, 255, 0.1); /* glassmorphism look */
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 22px;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.booking-div form label {
+  font-size: 14px;
+  font-family: "Georgia", "Times New Roman", serif; 
+  font-weight: 600;
+  text-align: left;
+  color: #ffd38d;
+}
+
+.booking-div form input {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  opacity: 80%;
+  color: #fff;
+  transition: border 0.3s ease;
+}
+
+.booking-div form input:focus {
+  border-color: #c68d4a;
+  box-shadow: 0 0 6px rgba(198, 141, 74, 0.4);
+}
+
+.booking-div form button {
+  grid-column: span 2;
+  padding: 14px;
+  background: linear-gradient(135deg, #c68d4a, #e1ab6d);
+  border: none; 
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-div form button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(198, 141, 74, 0.5);
+}
+
