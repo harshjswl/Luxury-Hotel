@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./component/Navbar";
+
 import Home from "./pages/HomePage/Home";
 import Amenites from "./pages/HomePage/Amenites";
 import Contact from "./pages/HomePage/Contact";
@@ -16,7 +16,6 @@ import Footer from "./component/Footer";
 function App() {
   return (
     <Router>
-      <Navbar />  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutPage"  element={<AboutPage />} />

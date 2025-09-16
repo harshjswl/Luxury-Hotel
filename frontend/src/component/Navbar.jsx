@@ -11,85 +11,16 @@ function Navbar() {
         <img src={logo} alt="logo" />
       </div>
       <div className="list-div">
+
         <ul>
-          <li>
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              activeClass="active"
-            >
-              <a href="/">Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              activeClass="active"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="rooms"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              activeClass="active"
-              href="/roomsPage"
-            >
-              Rooms
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="amenities"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              activeClass="active"
-            >
-              Amenities
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              activeClass="active"
-            >
-              Contact
-            </Link>
-          </li>
-
-              <li>
-            <Link
-              to="location"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              activeClass="active"
-            >
-              Location
-            </Link>
-          </li>
-
+          <li><a href="/" className={location.pathname === "/" ? "active" : ""}>Home</a></li>
+          <li><a href="/aboutpage" className={location.pathname === "/aboutpage" ? "active" : ""}>About</a></li>
+          <li><a href="/roomspage" className={location.pathname === "/roomspage" ? "active" : ""}>Rooms</a></li>
+          <li><a href="/amenities" className={location.pathname === "/amenities" ? "active" : ""}>Amenities</a></li>
+          <li><a href="/location" className={location.pathname === "/location" ? "active" : ""}>Location</a></li>
+          <li><a href="/contact" className={location.pathname === "/contact" ? "active" : ""}>Contact</a></li>
         </ul>
+
       </div>
       <div className="right-side">
         <div className="user-icon">

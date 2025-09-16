@@ -5,10 +5,12 @@ import Rooms from './Rooms'
 import Amenites from './Amenites'
 import Contact from './Contact'
 import Location from './Location'
+import HomeNavbar from '../../component/HomeNavbar'
 
 function Home() {
   return (
     <div>
+      <HomeNavbar />
       <section id="home">
         <Banner />
       </section>

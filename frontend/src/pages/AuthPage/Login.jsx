@@ -1,18 +1,22 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import authbg from "../../assets/authbg.png";
 import "./Login.css";
+import Navbar from "../../component/Navbar";
 
 function Login() {
-  const navigate = useNavigate();
+
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div 
+    <>
+       <Navbar />
+
+           <div 
       className="login-background"
       style={{ backgroundImage: `url(${authbg})` }}
     >
+        
       <div className="login-card">
         <h2 className="form-title">Login</h2>
 
@@ -62,6 +66,9 @@ function Login() {
         </div>
       </div>
     </div>
+       
+       </>
+
   );
 }
 
