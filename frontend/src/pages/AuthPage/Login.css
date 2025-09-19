@@ -1,0 +1,133 @@
+.login-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 380px;
+  padding: 30px;
+  background: rgba(232, 221, 208, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  opacity: 75%;
+}
+
+
+.form-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #14150f;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #14150f;
+}
+
+.form-group input {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border: 2px solid #c68d4a;
+  box-shadow: 0px 0px 8px rgba(198, 141, 74, 0.5);
+}
+
+
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: #444;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: #c68d4a;
+}
+
+
+.login-btn {
+  width: 100%;
+  height: 45px;
+  background: #c68d4a;
+  color: #14150f;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #e1ab6d;
+  transform: scale(1.03);
+}
+
+
+.extra-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.extra-links p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.extra-links a {
+  color: #d17c1b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.extra-links a:hover {
+  color: #de9e56;
+  text-decoration: underline;
+}

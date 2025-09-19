@@ -1,0 +1,81 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    width: 100%;
+    height: 100px;
+    background-color:  #14150f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-div img{
+    width: 117px;
+    height: auto;
+}
+.logo-div img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.list-div ul{
+    display: flex;
+    list-style: none;
+    gap: 25px  ;
+}
+
+.list-div ul li a {
+    text-decoration: none;
+    color: #c68d4a;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;                           
+    position: relative;                                
+    padding-bottom: 3px;
+}
+
+.list-div ul li a:hover {
+   color: #e1ab6d;
+}
+
+
+.list-div ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0%;
+    height: 2px;
+    background-color: #e1ab6d;
+    transition: width 0.3s ease;
+}
+
+.list-div ul li a:hover::after,
+.list-div ul li a.active::after {
+    width: 100%;  
+}
+.right-side{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-icon{
+    color: #c68d4a;
+    font-size: 28px;
+    cursor: pointer;
+}
+.user-icon:hover {
+   color: #e1ab6d;
+   transform: scale(1.1);
+  transition: 0.3s;
+}
+
+
+.menu-icon{
+    display: none;
+    font-size: 28px;
+    color: #c68d4a;
+    cursor: pointer;
+}

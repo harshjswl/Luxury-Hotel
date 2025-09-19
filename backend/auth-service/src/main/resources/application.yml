@@ -1,0 +1,48 @@
+#=================================#
+#       Application Info          #
+#=================================#
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo
+    username: postgres
+    password: harsh
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: 
+    password: 
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: 9090
+
+#=================================#
+#    JWT Security Configuration   #
+#=================================#
+jwt:
+  secret: NDEzMzgzNjg2MzM4MzQzMDYyNjQzNzY0MzczNTM0NjE2NDY0MzYzNTY0NjQzNzY0MzQ=
+  expiration: 86400000
+  accessExpirationMs: 900000
+  refreshExpirationMs: 604800000
+
+
+# application.yml (excerpt)
+frontend:
+  url: http://localhost:5173
